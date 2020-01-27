@@ -1,0 +1,31 @@
+#alert-dialog-title{
+  h2{
+      color: #e61d31 !important;
+      font-size: 1.2em !important;
+      background-color: white !important;
+      text-align: center !important;
+  }
+}
+
+p{
+  &#alert-dialog-description{
+      font-size: 1em;
+      text-align: center;
+  }
+
+  table{
+      font-size: .82em !important;
+  }
+}
+
+img{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 4em;
+  margin-bottom: 1.5em;
+}
+
+[class *= "MuiDialog-paper"]{
+  margin: 16px !important;
+}

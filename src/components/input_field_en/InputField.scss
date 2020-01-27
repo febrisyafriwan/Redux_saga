@@ -1,0 +1,57 @@
+.component-text-field{
+  input{
+      color: #595959;
+      font-size: 1.2em !important;
+      padding: 0em 0em 0.3em 0em !important;
+      height: 30px !important;
+
+      &[disabled]{
+          color: #9e9e9e !important;
+      }
+  }
+
+  label{
+      font-size: 1.3em !important;
+      color: #8c8c8c !important;
+  }
+
+  .disabled-inputfield > div[class *= "MuiInput-formControl"]:before {
+      border-bottom-style: solid !important;
+      border-color: #d0d0ce !important;
+  }
+
+  .error-field{
+      label{
+          color: red !important;
+
+          &:after{
+              content: "!";
+              margin-left: 4px;
+              color: white;
+              width: 2em;
+              height: 2em;
+              text-align: center;
+              line-height: 2em;
+              background-color: red;
+              border-radius: 50%;
+              font-size: 12px;
+              display: inline-block;
+          }
+      }
+  }
+
+  .validator-inputField{
+      height: 20px;
+      width: 100%;
+      p{
+          color: red !important;
+          margin: 0px !important;
+          font-size: 12px;
+          font-style: italic;
+      }
+  }
+}
+
+// .component-text-field > div[class *= "MuiInput-disabled"]:before {
+
+// }

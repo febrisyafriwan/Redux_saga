@@ -1,0 +1,45 @@
+.component-select{
+  margin-top: -8px !important;
+
+  [class *= "MuiInput-disabled"]:before {
+      border-bottom-style: solid !important;
+      border-color: #d0d0ce !important;
+  }
+
+  .error-field{
+      label{
+          color: red;
+  
+          &:after{
+              content: "!";
+              margin-left: 4px;
+              color: white;
+              width: 2em;
+              height: 2em;
+              text-align: center;
+              line-height: 2em;
+              background-color: red;
+              border-radius: 50%;
+              font-size: 12px;
+              display: inline-block;
+          }
+      }
+  }
+
+  .validator-select{
+      height: 20px;
+      width: 100%;
+      p{
+          color: red;
+          margin: 0px !important;
+          font-size: 12px;
+          font-style: italic;
+      }
+  }
+}
+
+.select-component-description{
+  font-size: 10px;
+  margin-left: 4px;
+}
+
