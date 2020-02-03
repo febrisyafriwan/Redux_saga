@@ -12,6 +12,7 @@ import Select from "@material-ui/core/Select";
 import { validationSelect } from "../../shared/formUtils";
 
 import "./Select.scss";
+import { width, minWidth } from "@material-ui/system";
 
 const styles = theme => ({
   root: {
@@ -48,12 +49,12 @@ class Selects extends React.Component {
   initValueFieldStyle() {
     if (this.props.value === "" || this.props.value === undefined) {
       if (this.props.disabled === true) {
-        return "#9e9eb6"; //disabled color
+        return "#9e9eb6"; //disabled color abu2
       } else {
         if (this.props.placeholder !== undefined) {
-          return "#c4c5c7"; //placeholder color
+          return "#c4c5c7"; //placeholder color abu2
         } else {
-          return "#595970"; //value color
+          return "#595970"; //value color  biru kehitaman
         }
       }
     } else if (this.props.value !== "") {
@@ -101,6 +102,7 @@ class Selects extends React.Component {
     if (this.state.onSubmit === false) {
       this.setState({ onSubmit: true });
     }
+
     // console.log("[Select]handleChange state: ", this.state);
   };
 
@@ -110,9 +112,10 @@ class Selects extends React.Component {
       this.props.required === undefined ? false : this.props.required;
     let value = valueSelected === undefined ? "" : valueSelected;
     this.isValid = validationSelect(value, required);
+    console.log(this.isValid.message);
   }
 
-  onFokus(e) {
+  onFocus(e) {
     // let {name, value} = e.target;
     // console.log("[Select]onFokus name: "+name+"  value: " + value);
   }
@@ -134,9 +137,12 @@ class Selects extends React.Component {
     } = this.props;
     return (
       // <div className={classes.root}>
-      <div className="component-select" onClick={this.onFokus}>
+      <div className="component-select" onClick={this.onFocus}>
         <FormControl fullWidth className={className} disabled={disabled}>
-          <InputLabel htmlFor={id} style={{ fontSize: "1.4em" }}>
+          <InputLabel
+            htmlFor={id}
+            style={{ fontSize: "1.4em", paddingBottom: "1em" }}
+          >
             {label}
           </InputLabel>
 
@@ -146,9 +152,11 @@ class Selects extends React.Component {
             style={{
               height: "37px",
               fontSize: "1.35em",
-              color: this.state.valueColor
+              color: this.state.valueColor,
+              width: "100%",
+              minWidth: "200px"
             }}
-            onFocus={this.onFokus}
+            onFocus={this.onFocus}
             inputProps={{
               name: name,
               id: id

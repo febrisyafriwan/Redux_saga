@@ -1,4 +1,4 @@
-const initial = { news: "", loading: false, input: "" };
+const initial = { news: "", loading: false };
 const reducer = (state = initial, action) => {
   switch (action.type) {
     case "GET_NEWS":
@@ -6,12 +6,6 @@ const reducer = (state = initial, action) => {
       const stateGETNEWS = { ...state };
       stateGETNEWS.loading = true;
       return stateGETNEWS;
-
-    case "GET_INPUT":
-      console.log("GETINPUT");
-      const stateGETINPUT = { ...state };
-      stateGETINPUT.input = action.value;
-      return stateGETINPUT;
 
     case "NEWS_RECEIVED":
       console.log("NEWS_RECEIVED");

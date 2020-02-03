@@ -6,7 +6,9 @@ import React, { Component } from "react";
 import Button from "../containers/redux_saga_example/Button";
 import NewsItem from "../containers/redux_saga_example/NewsItem";
 import Loading from "../containers/redux_saga_example/Loading";
-import Input from "../containers/redux_saga_example/Input";
+import InputExample from "../containers/input_example/InputExample";
+import SelectExample from "../containers/select_example/SelectExample";
+
 // import ButtonDemo from "../containers/button_example/ButtonExample";
 class App extends Component {
   render() {
@@ -31,7 +33,7 @@ class App extends Component {
         {/* <Button />
         <Loading />
         <NewsItem /> */}
-        {<Input />}
+        {<SelectExample />}
         {/* <ButtonDemo /> */}
       </div>
     );

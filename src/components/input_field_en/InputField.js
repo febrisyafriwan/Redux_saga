@@ -24,7 +24,7 @@ class InputField extends React.Component {
       error: false,
       helperText: "",
       // showPassword: false,
-      onSubmit: this.props.onSubmit == undefined ? false : this.props.onSubmit
+      onSubmit: this.props.onSubmit === undefined ? false : this.props.onSubmit
     };
 
     this.onInput = this.onInput.bind(this);
@@ -41,7 +41,7 @@ class InputField extends React.Component {
     this.validation(e.target.value);
     this.props.onChange(e, this.isValid.flag);
 
-    if (this.state.onSubmit == false) {
+    if (this.state.onSubmit === false) {
       this.setState({ onSubmit: true });
     }
   }
@@ -86,26 +86,26 @@ class InputField extends React.Component {
   validation(targetValue) {
     // console.log("[InputField]validation: ", targetValue);
     let minLength =
-      this.props.minLength == undefined ? 0 : this.props.minLength;
+      this.props.minLength === undefined ? 0 : this.props.minLength;
     let required =
-      this.props.required == undefined ? false : this.props.required;
-    let value = targetValue == undefined ? "" : targetValue;
+      this.props.required === undefined ? false : this.props.required;
+    let value = targetValue === undefined ? "" : targetValue;
     let validatorAs =
-      this.props.validationType == undefined
+      this.props.validationType === undefined
         ? this.props.type
         : this.props.validationType;
     // console.log("===value: ", value);
 
-    if (validatorAs == "text") {
+    if (validatorAs === "text") {
       this.isValid = validationText(value, minLength, required);
       // console.log("===isValid["+this.props.type+"]: ", this.isValid);
-    } else if (validatorAs == "number" || validatorAs == "tel") {
+    } else if (validatorAs === "number" || validatorAs === "tel") {
       this.isValid = validationNumber(value, minLength, required);
       // console.log("===isValid["+this.props.type+"]: ", this.isValid);
-    } else if (validatorAs == "email") {
+    } else if (validatorAs === "email") {
       this.isValid = validationEmail(value, minLength, required);
       // console.log("===isValid["+this.props.type+"]: ", this.isValid);
-    } else if (validatorAs == "unique-text") {
+    } else if (validatorAs === "unique-text") {
       this.isValid = validationUniqeText(value, minLength, required);
     }
     // console.log("===isValid: ", this.isValid);
@@ -149,10 +149,10 @@ class InputField extends React.Component {
           label={label}
           type={type === "textbox" ? "text" : type}
           required={required}
-          onBlur={onBlur || this.onBlur}
+          // onBlur={onBlur || this.onBlur}
           onChange={this.onChange}
           className={
-            disabled == undefined || disabled == false
+            disabled === undefined || disabled === false
               ? className
               : `${className} disabled-inputfield`
           }
@@ -161,7 +161,7 @@ class InputField extends React.Component {
           // error={error || this.state.error}
           // onSubmit={this.onSubmit}
           fullWidth={fullWidth}
-          onFocus={this.onFocus}
+          // onFocus={this.onFocus}
           onInput={this.onInput}
           defaultValue={defaultValue}
           multiline={type === "textbox"}
@@ -180,8 +180,8 @@ class InputField extends React.Component {
         />
         <div className="validator-inputField">
           <p>
-            {this.state.onSubmit == false &&
-            (onSubmit == false || onSubmit == undefined)
+            {this.state.onSubmit === false &&
+            (onSubmit === false || onSubmit === undefined)
               ? ""
               : this.isValid.message}
           </p>

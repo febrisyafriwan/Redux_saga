@@ -162,7 +162,6 @@ class PendaftaranAAJI extends React.Component {
             label="WAKTU UJIAN"
             required={true}
             value={pendaftaranAAJI.waktuUjian.value}
-            className="pendaftaran-aaji-waktuUjian mt-25"
             disabled={formToDisable(
               role,
               "pendaftaran-aaji-waktuUjian",
