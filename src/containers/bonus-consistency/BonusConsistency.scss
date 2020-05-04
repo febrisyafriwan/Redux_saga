@@ -1,0 +1,144 @@
+
+.container-statement-header{
+  display: flex !important;
+  padding: 30px 20px 0px 20px;
+  .field{
+    flex-direction: column;
+    flex:1;
+    .end-period{
+      font-size: 21px;
+      color: rgb(104, 100, 100);
+      font-weight: bold;
+    }
+    .agency{
+      font-size: 17px;
+      color: rgb(104, 100, 100);
+    }
+  }
+  .icon{
+    align-self: center;
+  }
+}
+
+.container-statement-subheader{
+  display: flex !important;
+  
+  .field{
+    flex:3;
+    background-color: rgb(253, 17, 17);
+    padding: 8px 0px 10px 22px;
+    .total-bonus{
+      font-size: 15px;
+      color: white;
+    }
+    .amount{
+      font-size: 22px;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  .icon{
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgb(253, 17, 17);
+    .first-icon{
+      color: white;
+      font-size: 20px;
+      padding: 0px 10px;
+      &.active{
+        color: rgb(255, 133, 133);
+      }
+    }
+    .second-icon{
+      color:white;
+      font-size: 20px;
+      padding: 0px 10px;
+      &.active{
+        color: rgb(255, 133, 133);
+      }
+    }
+  }
+}
+
+.container-new{
+  position: relative;
+  margin: 20px 20px  0px 20px;
+  .absolutes{
+    right: 7;
+    top:60;
+    width:250px;
+    height:120px;
+    display: flex;
+    position: absolute;
+    background-color:white;
+    flex-direction: column;
+    border-radius: 10px;
+  }.item{
+    border-bottom: 1px solid rgb(197, 197, 197);
+    width:250px;
+    height:60px;
+    text-align: center;
+    padding-top: 15px
+  }
+}
+
+
+.container-statement-detail{
+  .field{
+    .detail-white{
+      padding: 0px 18px;
+      
+      &.no-sub{
+        font-size: 15px;
+        color: red;
+        padding-top: 10px;
+      }
+      &.sub{
+        color: rgb(104, 100, 100);
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 10px;
+      }
+    }
+    .detail-grey{
+    background-color:rgb(216, 216, 216);
+      .details{
+        margin: 0px 18px;
+        &.no-sub{
+          font-size: 15px;
+          color: red;
+          padding-top: 10px;
+        }
+        &.sub{
+          font-size: 15px;
+          color: rgb(104, 100, 100);
+          font-weight: bold;
+          font-size: 20px;
+          border-bottom: 1px solid white;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.tab{
+  border-bottom: 1px solid rgb(29, 28, 28);
+  flex:1;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(173, 165, 165);
+  &.active {
+    flex:1;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+    border-bottom: 5px solid red;
+  }
+}
+
+
+

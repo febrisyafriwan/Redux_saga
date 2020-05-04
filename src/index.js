@@ -4,9 +4,9 @@ import { render } from "react-dom";
 import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import { logger } from "redux-logger";
-import App from "./components/App";
-import rootReducer from "./reducers/index";
-import rootSaga from "../src/containers/redux_saga_example/Sagas";
+import App from "./App";
+import rootReducer from "./rootReducers/index";
+import rootSaga from "./rootSagas/index";
 import "./styles.css";
 
 const sagaMiddleware = createSagaMiddleware();

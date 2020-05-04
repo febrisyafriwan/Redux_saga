@@ -15,9 +15,9 @@ class NewsItem extends Component {
 }
 function mapStateToProps(state) {
   console.log("article");
-  console.log(JSON.stringify(state.Reducers.news));
+  console.log(JSON.stringify(state.news));
   return {
-    article: state.Reducers.news
+    article: state.news
   };
 }
 
