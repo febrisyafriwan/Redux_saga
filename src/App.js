@@ -3,14 +3,15 @@ import React, { Component } from "react";
 // import NewsItem from "./containers/redux_saga_example/NewsItem";
 // import Loading from "./containers/redux_saga_example/Loading";
 import { IntlProvider } from "react-intl";
-import ProductionBonus from "./containers/production_bonus/ProductionBonus";
+// import ProductionBonus from "./containers/production_bonus/ProductionBonus";
 // import BonusConsistency from "./containers/bonus-consistency/BonusConsistency";
+import Main from "./containers/keluarga_berencana/main";
 class App extends Component {
   render() {
     return (
       <IntlProvider locale="en">
         <div>
-          <ProductionBonus />
+          <Main />
           {/* {<BonusConsistency />} */}
           {/* <Loading />
         <NewsItem /> */}

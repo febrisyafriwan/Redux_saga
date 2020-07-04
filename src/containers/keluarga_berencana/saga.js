@@ -58,7 +58,7 @@ export function* workerAddAccount(action) {
   }
 }
 
-export function* watcherContact() {
+export function* watcherKeluarga() {
   yield takeLatest("getAllAccount", workerGetAllData);
   yield takeEvery("addAccount", workerAddAccount);
 }
